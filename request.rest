@@ -1,0 +1,26 @@
+GET http://localhost:5000/user
+
+###
+GET http://localhost:5000/user/6287a69cf51adc83c74a438b
+
+###
+POST http://localhost:5000/daftar
+Content-Type: application/json
+
+{
+    "title": "user 1",
+    "price": 2500
+}
+
+###
+PUT http://localhost:5000/user/6287a69cf51adc83c74a438b
+Content-Type: application/json
+
+{
+    "title": "user 1",
+    "price": 2500
+}
+
+###
+DELETE http://localhost:5000/user/_id
+
