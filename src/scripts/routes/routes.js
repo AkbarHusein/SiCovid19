@@ -4,6 +4,8 @@ const {
   forumPage,
   loginPage,
   signinPage,
+  login,
+  signin,
 } = require('../controller/handlers');
 
 const router = express.Router();
@@ -15,9 +17,9 @@ router.get('/home', homePage);
 router.get('/forum', forumPage);
 // * Login Page
 router.get('/login', loginPage);
-router.post('/login', loginPage);
+router.post('/login', login);
 // * SignIn Page
 router.get('/signin', signinPage);
-router.post('/signin', signinPage);
+router.post('/signin', signin);
 
 module.exports = router;

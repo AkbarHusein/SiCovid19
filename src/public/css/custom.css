@@ -28,17 +28,18 @@ header button {
 }
 
 header .btn {
+  font-size: 16px !important;
   border-radius: 14px !important;
 }
 header .btn-login {
   color: #ea4559 !important;
-  border-block: 3px solid #ea4559;
-  border: 3px solid #ea4559;
+  border: 3px solid #ea4559 !important;
 }
 
 header .btn-signin {
   color: #fff !important;
   background-color: #ea4559;
+  border: 3px solid #ea4559 !important;
 }
 
 .nav-item .nav-link.active {
@@ -126,6 +127,13 @@ section#vaksinasi {
 .btn-temukan {
   border-radius: 20px;
   border: #ea4559 solid 1px;
+}
+.btn-temukan:hover {
+  background-color: #f11e37 !important;
+}
+
+.btn-temukan:active {
+  background-color: #151d41 !important;
 }
 
 #filterProvinsi,
