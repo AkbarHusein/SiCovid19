@@ -1,1 +1,61 @@
-<h1>Signin</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/signinLogin.css">
+    <title><%= title; %> </title>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="field-card d-flex flex-column justify-content-center align-items-center">
+            <a href="/" class="arrow-back-link mr-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+            </a>
+            <div class="header d-flex flex-column justify-content-center align-items-center">
+                <img src="assets/icons/Fill out-pana (1).svg" alt="Illustrator" class="col-12" />
+                <h2 class="col-12 text-center">Buat Akun</h2>
+            </div>
+            <div class="fields mt-4">
+                <div>
+                    <p class="mb-0">Untuk melanjutkan ke Forum diskusi...</p>
+                    <p>Sudah memiliki akun? <a class="masuk" href="/login">Masuk</a></p>
+                </div>
+                <form method="POST" action="/login" class="register-form row g-1 mt-4 d-lg-flex justify-content-center">
+                    <div class="col-6 mb-2">
+                        <input type="text" class="form-control" id="namaDepan" placeholder="Nama Depan" name="namaDepan"
+                            required />
+                    </div>
+                    <div class="col-6 mb-2">
+                        <input type="text" class="form-control" id="namaBelakang" placeholder="Nama Belakang"
+                            name="namaBelakang" required />
+                    </div>
+                    <div class="col-12 mb-2">
+                        <input type="text" class="form-control" id="noTelp" placeholder="Nomor Telepon"
+                            name="nomorTelepon" required />
+                    </div>
+                    <div class="col-12 mb-2">
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" required />
+                    </div>
+                    <div class="col-12 mb-2">
+                        <input type="password" class="form-control" id="password" placeholder="Kata Sandi"
+                            name="password" required />
+                    </div>
+                    <button class="register" type="submit">Daftar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

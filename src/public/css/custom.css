@@ -18,7 +18,7 @@ header .nav-link {
   font-size: 18px;
 }
 
-header .nav-link:hover {
+header .nav-link:hover:not(.btn-signin) {
   color: #ea4559 !important;
 }
 
