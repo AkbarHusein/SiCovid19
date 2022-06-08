@@ -149,6 +149,34 @@ section#vaksinasi {
   padding: 12px 50px !important;
   background-color: #ea4559 !important;
 }
+
+/* modal forum */
+.modal-header {
+    background-color: #FAD1D5;
+}
+
+.modal-body {
+    background-image: url("../images/Background-Forum.svg");
+    background-size: cover;
+}
+
+.btn-without-style {
+    all: unset;
+    cursor: pointer;
+}
+
+.btn-without-style:hover {
+    color: #EA4559;
+  }
+
+.form-control {
+    background: transparent;
+}
+
+.dropdown-style {
+    border-radius: 10%;
+}
+
 .list-vaksinasi {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
