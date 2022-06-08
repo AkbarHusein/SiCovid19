@@ -103,7 +103,7 @@ section#protokol {
 }
 .section-header-text {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 36px !important;
 }
 .ilustration-image {
   min-width: 150px;
@@ -145,7 +145,10 @@ section#vaksinasi {
   padding: 8px 25px !important;
   background-color: #ea4559;
 }
-
+.btn-mulai-diskusi {
+  padding: 12px 50px !important;
+  background-color: #ea4559 !important;
+}
 .list-vaksinasi {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
