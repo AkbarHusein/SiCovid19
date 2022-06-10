@@ -18,7 +18,7 @@ header .nav-link {
   font-size: 18px;
 }
 
-header .nav-link:hover:not(.btn-signin) {
+header .nav-link:hover:not(.btn-signin, .btn-user) {
   color: #ea4559 !important;
 }
 
@@ -152,29 +152,29 @@ section#vaksinasi {
 
 /* modal forum */
 .modal-header {
-    background-color: #FAD1D5;
+  background-color: #fad1d5;
 }
 
 .modal-body {
-    background-image: url("../images/Background-Forum.svg");
-    background-size: cover;
+  background-image: url('../images/Background-Forum.svg');
+  background-size: cover;
 }
 
 .btn-without-style {
-    all: unset;
-    cursor: pointer;
+  all: unset;
+  cursor: pointer;
 }
 
 .btn-without-style:hover {
-    color: #EA4559;
-  }
+  color: #ea4559;
+}
 
 .form-control {
-    background: transparent;
+  background: transparent;
 }
 
 .dropdown-style {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 .list-vaksinasi {

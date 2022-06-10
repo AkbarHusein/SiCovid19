@@ -31,18 +31,15 @@
                     <p class="mb-0">Untuk melanjutkan ke Forum diskusi...</p>
                     <p>Sudah memiliki akun? <a class="masuk" href="/login">Masuk</a></p>
                 </div>
-                <form method="POST" action="/login" class="register-form row g-1 mt-4 d-lg-flex justify-content-center">
-                    <div class="col-6 mb-2">
-                        <input type="text" class="form-control" id="namaDepan" placeholder="Nama Depan" name="namaDepan"
-                            required />
-                    </div>
-                    <div class="col-6 mb-2">
-                        <input type="text" class="form-control" id="namaBelakang" placeholder="Nama Belakang"
-                            name="namaBelakang" required />
+                <form method="POST" action="/signin/register" class="register-form row g-1 mt-4 d-lg-flex justify-content-center">
+                    
+                    <div class="col-12 mb-2">
+                        <input type="text" class="form-control" id="name" placeholder="name"
+                            name="name" required />
                     </div>
                     <div class="col-12 mb-2">
-                        <input type="text" class="form-control" id="noTelp" placeholder="Nomor Telepon"
-                            name="nomorTelepon" required />
+                        <input type="text" class="form-control" id="noTelp" placeholder="username"
+                            name="username" required />
                     </div>
                     <div class="col-12 mb-2">
                         <input type="email" class="form-control" id="email" placeholder="Email" name="email" required />

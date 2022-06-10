@@ -1,11 +1,39 @@
 const express = require('express');
-const router = require('./src/scripts/routes/routes');
-const { HOSTNAME, PORT } = require('./src/scripts/global/config');
+const session = require('express-session');
+const flash = require('req-flash');
+const cors = require('cors');
+const middleware = require('./src/scripts/utils/middleware');
+const mongoose = require('mongoose');
+const { PORT, MONGODB_URI } = require('./src/scripts/global/config');
 const path = require('path');
 const bodyParser = require('body-parser');
 const expressLayout = require('express-ejs-layouts');
 
+const router = require('./src/scripts/routes/router-app');
+const routerLogin = require('./src/scripts/routes/router-login');
+const routerSignin = require('./src/scripts/routes/router-register');
+
 const app = express();
+
+console.log('connecting to mongoDB');
+const mongodb_config = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+};
+
+mongoose
+  .connect(MONGODB_URI, mongodb_config)
+  .then(() => {
+    console.log('connected to mongodb');
+  })
+  .catch((error) => {
+    console.error('error connecting to mongo db', error.message);
+  });
+
+app.use(cors());
+app.use(express.json());
 
 /* * Use url parsing */
 app.use(bodyParser.json());
@@ -15,6 +43,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(expressLayout);
 app.set('views', path.join(__dirname, './src/scripts/views/pages'));
+
+/* * Configurasi session  */
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.SECRETPASSWORD,
+    name: 'secretName',
+    cookie: {
+      sameSite: true,
+      maxAge: 600000,
+    },
+  })
+);
+app.use(flash());
 
 // * Static File
 app.use(express.static('public'));
@@ -28,6 +71,11 @@ app.use('/', [
 
 // * Inisialisasi router
 app.use('/', router);
+app.use('/login', routerLogin);
+app.use('/signin', routerSignin);
+// app.use('/api/entries', entriesRouter);
+app.use(middleware.unknownEndpoint);
+app.use(middleware.errorHandler);
 
 app.listen(PORT, () => {
   console.log(`App running at http://localhost:${PORT}`);
