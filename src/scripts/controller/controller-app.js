@@ -4,7 +4,7 @@ const Handler = {
       layout: '../layout/main-layout',
       page: 'home',
       title: 'SiCovid19 | Home',
-      url: 'coba',
+      url: '/',
       username: req.session.username,
     });
   },
@@ -13,7 +13,7 @@ const Handler = {
       layout: '../layout/main-layout',
       page: 'forum',
       title: 'SiCovid19 | Forum',
-      url: 'coba',
+      url: '/',
       username: req.session.username,
     });
   },
