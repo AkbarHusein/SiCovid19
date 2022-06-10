@@ -68,6 +68,7 @@ app.use('/', [
   express.static(path.join(__dirname, './node_modules/bootstrap/dist/js')),
   express.static(path.join(__dirname, './node_modules/ejs')),
   express.static(path.join(__dirname, './src/public')),
+  express.static(path.join(__dirname, './src/public/js/pwa.js')),
 ]);
 
 // * Inisialisasi router
