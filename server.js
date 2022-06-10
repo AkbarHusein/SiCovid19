@@ -12,6 +12,7 @@ const expressLayout = require('express-ejs-layouts');
 const router = require('./src/scripts/routes/router-app');
 const routerLogin = require('./src/scripts/routes/router-login');
 const routerSignin = require('./src/scripts/routes/router-register');
+const routerEntries = require('./src/scripts/routes/router-entries');
 
 const app = express();
 
@@ -73,7 +74,7 @@ app.use('/', [
 app.use('/', router);
 app.use('/login', routerLogin);
 app.use('/signin', routerSignin);
-// app.use('/api/entries', entriesRouter);
+app.use('/entries', routerEntries);
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
