@@ -1,0 +1,95 @@
+<!-- Cek Routes halaman -->
+<% if (page.toLowerCase() === 'login') { %>
+<%- body; %>
+<% }else if(page.toLowerCase() == 'signin') {%>
+<%- body; %>
+<% } else{%>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ea4559"/>
+    <link rel="apple-touch-icon" href="/src/public/assets/icons/android-icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title><%= title; %> </title>
+</head>
+
+<body class="position-relative">
+    <header>
+        <nav class="container-lg navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="/home">
+                <img src="./assets/icons/covid19-virus-1.svg" class="brand-logo">
+                SiCovid19</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#protokol">Protokol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vaksinasi">Vaksinasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forum">Forum</a>
+                    </li>
+                    <ul class="btn-wrapper align-items-lg-center navbar-nav ml-0 ml-md-4 mt-3 mt-md-0">
+                        <% if (username) { %>
+                            <li class="nav-item dropdown bg-danger rounded-pill">
+                                <a class="nav-link dropdown-toggle text-white btn-user" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <%= username %>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/login/logout">Logout</a>
+                                </div>
+                            </li>
+                        <% } else {%>
+                            <li class="nav-item mr-0 mr-lg-2 mb-2 mb-lg-0">
+                                <a class="nav-link btn btn-login" href="/login">Masuk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-signin" href="/signin">Daftar</a>
+                            </li>
+                        <% } %> 
+                    </ul>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <div class="container-lg">
+        <main id="mainContent">
+            <%- body; %>
+        </main>
+    </div>
+    <footer class="text-center text-white p-5">
+        <div class="container">
+            <p class="m-0">Copyright 2022 @Sicovid19</p>
+        </div>
+    </footer>
+
+
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="js/pwa.js"></script>
+    <script src="js/status.js"></script>
+
+</body>
+
+</html>
+<%}  %>

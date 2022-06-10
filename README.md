@@ -1,0 +1,2 @@
+# SiCovid19
+SiCovid19 adalah aplikasi web base yang dirancang untuk pengerjaan capstone project pada platform Dicoding. Aplikasi ini sebagai media sistem informasi terkait pandemi covid19 yang ada di indonesia. Pada aplikasi ini terdapat berbagai fitur guna mempermudah masyarakat dalam mencari informasi seputar Covid19, rumah sakit rujukan pasien Covid, rumah sakit yang sedang melaksanakan vaksinasi dan lain sebagainya.

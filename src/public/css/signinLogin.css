@@ -1,0 +1,63 @@
+body {
+  color: white;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.field-card {
+  position: relative;
+  padding: 30px;
+  width: 400px;
+  border-radius: 40px;
+  background-color: #402929;
+}
+
+.bi-arrow-left-circle {
+  color: white !important;
+  width: 44px;
+  height: 44px;
+}
+
+img.ilustration-image {
+  width: 180px;
+  height: 200px;
+}
+
+.masuk {
+  color: #f23054;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+input.form-control {
+  border-radius: 30px;
+}
+
+button.register {
+  width: 40%;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+}
+
+.form-check label {
+  font-size: 13px;
+}
+
+#alert-error {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+#alert-success {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}

@@ -1,0 +1,35 @@
+/* *Small */
+@media screen and (max-width: 576px) {
+  .ilustration-image {
+    min-width: 100px !important;
+    max-width: 150px !important;
+  }
+  .data-wrapper {
+    font-size: 24px !important;
+  }
+  .count-data {
+    font-size: 28px !important;
+  }
+  .btn-temukan {
+    width: 100%;
+  }
+
+  .list-vaksinasi {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  }
+}
+
+/* *Medium */
+@media screen and (max-width: 768px) {
+  .data-wrapper {
+    background-color: transparent !important;
+  }
+}
+
+/* *Large */
+@media screen and (max-width: 992px) {
+}
+
+/* *Extra Large */
+@media screen and (max-width: 1200px) {
+}

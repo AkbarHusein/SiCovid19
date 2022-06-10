@@ -1,0 +1,49 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bootstrap": "4.6",
+    "brcypt": "^1.0.1",
+    "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "jquery": "^3.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "mongoose-unique-validator": "^2.0.3",
+    "passport": "^0.6.0",
+    "req-flash": "^0.0.3"
+  },
+  "name": "sicovid19",
+  "description": "SiCovid19 adalah aplikasi web base yang dirancang untuk pengerjaan capstone project pada platform Dicoding. Aplikasi ini sebagai media sistem informasi terkait pandemi covid19 yang ada di indonesia. Pada aplikasi ini terdapat berbagai fitur guna mempermudah masyarakat dalam mencari informasi seputar Covid19, rumah sakit rujukan pasien Covid, rumah sakit yang sedang melaksanakan vaksinasi dan lain sebagainya.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkbarHusein/SiCovid19.git"
+  },
+  "keywords": [
+    "sicovid19",
+    "covid",
+    "corona",
+    "pandemi",
+    "vaksinasi"
+  ],
+  "author": "FEBE CPSG-18",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkbarHusein/SiCovid19/issues"
+  },
+  "homepage": "https://github.com/AkbarHusein/SiCovid19#readme"
+}
