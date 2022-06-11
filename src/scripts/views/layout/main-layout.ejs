@@ -25,7 +25,7 @@
 
 <body class="position-relative">
     <header>
-        <nav class="container-lg navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="container-lg navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <a class="navbar-brand" href="/home">
                 <img src="./assets/icons/covid19-virus-1.svg" class="brand-logo">
                 SiCovid19</a>
@@ -36,16 +36,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto align-items-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<%- url; %>#home">Beranda</a>
+                        <a class="nav-link home" href="<%- url; %>#home">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<%- url; %>#protokol">Protokol</a>
+                        <a class="nav-link protokol" href="<%- url; %>#protokol">Protokol</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<%- url; %>#vaksinasi">Vaksinasi</a>
+                        <a class="nav-link vaksinasi" href="<%- url; %>#vaksinasi">Vaksinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/forum">Forum</a>
+                        <a class="nav-link forum" href="/forum">Forum</a>
                     </li>
                     <ul class="btn-wrapper align-items-lg-center navbar-nav ml-0 ml-md-4 mt-3 mt-md-0">
                         <% if (username) { %>
@@ -82,8 +82,8 @@
             <p class="m-0">Copyright 2022 @Sicovid19</p>
         </div>
     </footer>
-
-
+    
+    <script src="scripts/dom.js"></script>
     <script src="jquery.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="js/pwa.js"></script>
