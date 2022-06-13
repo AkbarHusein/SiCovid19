@@ -1,1 +1,142 @@
-<h1>Forum</h1>
+<div class="container-lg">
+<section id="forum" class="mb-5">
+  <div class="wrapper text-center row p-4">
+    <div class="section-header col-12 mb-3">
+      <p class="lead d-inline-block content-title mb-4">
+        <img src="./assets/icons/messageIcon.svg" alt="" srcset="">
+        <span>Forum Diskusi</span>
+      </p>
+      <h2 class="section-header-text">Diskusi bersama SiCovid19</h2>
+    </div>
+    <div class="section-content col-12">
+      <div class="row justify-content-center text-center">
+        <div class="vector-wrapper">
+          <img src="assets/images/My-answer-cuate-1.png" alt="icon message" class="w-75">
+        </div>
+        <div class="text-content p-4">
+          <p class=" m-auto">
+            Forum diskusi adalah salah satu fitur di website siCovid19 yang dibuat guna untuk membantu masyarakat dalam
+            hal bertukar informasi mengenai covid19 yang sedang di hadapi masyarakat Indonesia, baik dari sisi keadaan
+            fisik, vaksinasi, maupun yang lain. Pada fitur ini Anda mendapat berbagai informasi dan berdiskusi langsung
+            mengenai keadaan atau hal yang berkaitan dengan covid19.
+          </p>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+      <div>
+        <a class="btn btn-primary btn-mulai-diskusi rounded-pill font-weight-bold" data-bs-toggle="modal" href="#forumModalToggle" role="button">Mulai Diskusi</a>
+      </div>
+</section>
+
+<div class="modal fade" id="forumModalToggle" aria-labelledby="forumModalToggleLabel" tabindex="-1" aria-hidden="true"
+  style="display: none;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="lead d-inline-block modal-title">
+          <img src="./assets/images/forum 1.svg" alt="" srcset="" width="25px" height="25px">
+          <span>Forum Diskusi</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card bg-transparent border-secondary mb-3 rounded-4">
+          <div class="card-body">
+            <img src="./assets/images/72 - Edit.svg" alt="" srcset="" width="25px" height="25px">
+            <button class="btn btn-without-style" data-bs-target="#forumModalToggle2" data-bs-toggle="modal">Mulai
+              Diskusi</button>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <button class="btn dropdown-toggle rounded-pill" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Urutkan Berdasarkan</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Terbaru</a></li>
+            <li><a class="dropdown-item" href="#">Terlama</a></li>
+          </ul>
+        </div>
+        <div class="card bg-transparent border-secondary w-100 mb-3 rounded-4" style="width: 18rem;">
+          <div class="card-body">
+            <div class="lead d-inline-block uname-title">
+              <img src="./assets/images/user (1) 1.svg" alt="" srcset="" width="25px" height="25px">
+              <span>Jessica</span>
+            </div>
+            <h5 class="card-title">Faktor Risiko Covid-19</h5>
+            <p class="card-text">WCOVID-19 dapat menginfeksi siapa saja, tetapi efeknya akan lebih
+              berbahaya atau bahkan fatal bila menyerang orang lanjut usia, ibu hamil, perokok,
+              penderita penyakit tertentu, dan orang yang daya tahan tubuhnya lemah, seperti penderita
+              kanker.
+              Karena mudah menular, penyakit ini juga berisiko tinggi menginfeksi para tenaga medis
+              yang merawat pasien COVID-19. Oleh sebab itu, tenaga medis dan orang yang melakukan
+              kontak dengan pasien COVID-19 perlu menggunakan alat pelindung diri (APD).</p>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Balas" aria-label="Balas"
+                aria-describedby="button-addon">
+              <button class="btn btn-outline-danger" type="button" id="button-addon">
+                <img src="./assets/images/conversation 1.svg" alt="" srcset="" width="20px" height="20px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-transparent border-secondary w-100 mb-3 rounded-4" style="width: 18rem;">
+          <div class="card-body">
+            <div class="lead d-inline-block uname-title">
+              <img src="./assets/images/user (1) 1.svg" alt="" srcset="" width="25px" height="25px">
+              <span>Haikal</span>
+            </div>
+            <h5 class="topic-title">Bahaya Covid-19</h5>
+            <p class="topic-text">COVID-19 dapat menyebabkan gejala ringan hingga berat. Sekitar 80%
+              kasus dengan gejala ringan (pilek, sakit tenggorokan, batuk, dan demam) dapat pulih
+              tanpa perlu perawatan khusus. Namun, sekitar 1 dari setiap 5 orang mungkin akan
+              menderita sakit yang parah, seperti disertai pneumonia atau kesulitan bernafas, yang
+              biasanya muncul secara bertahap. Orang yang berusia lanjut, dan orang-orang dengan
+              kondisi medis yang sudah ada sebelumnya (seperti diabetes, tekanan darah tinggi dan
+              penyakit jantung, paru-paru, atau kanker), mereka biasanya lebih rentan untuk menjadi
+              sakit parah. Melihat perkembangan hingga saat ini, lebih dari 50% kasus konfirmasi telah
+              dinyatakan membaik, dan angka kesembuhan akan terus meningkat.</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Balas" aria-label="Balas"
+                aria-describedby="button-addon">
+              <button class="btn btn-outline-danger" type="button" id="button-addon">
+                <img src="./assets/images/conversation 1.svg" alt="" srcset="" width="20px" height="20px">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="forumModalToggle2" aria-labelledby="forumModalToggleLabel2" data-bs-backdrop="static"
+  tabindex="-1" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="lead d-inline-block modal-title">
+          <img src="./assets/images/user (1) 1.svg" alt="" srcset="" width="25px" height="25px">
+          <span>Shila</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <input type="email" class="form-control" id="forumFormControlInput1" placeholder="Topik Diskusi">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="forumFormControlTextarea1" rows="3"
+            placeholder="Ceritakan disini"></textarea>
+        </div>
+        <div class="button-form text-end">
+          <button class="btn btn-danger rounded-pill" data-bs-target="#forumModalToggle"
+            data-bs-toggle="modal">Batal</button>
+          <button type="submit" class="btn btn-danger rounded-pill" data-bs-target="#forumModalToggle"
+            data-bs-toggle="modal">Kirim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>

@@ -13,7 +13,7 @@ const createTemplateCardVaksinasi = (cardDataItem) => {
 
   cardDataItem.forEach((item) => {
     card += `
-    <div class="vaksinasi-item text-left">
+    <div class="vaksinasi-item text-left" data-aos="zoom-in" data-aos-duration="500" data-aos="flip-left" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" data-aos-offset="-200">
       <div class="card p-3">
         <div class="card-body">
           <h5 class="card-title">${item.province} - ${item.city}</h5>

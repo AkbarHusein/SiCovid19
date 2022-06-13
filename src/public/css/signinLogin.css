@@ -13,6 +13,13 @@ body {
   width: 400px;
   border-radius: 40px;
   background-color: #402929;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 5px 13px 3px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
 }
 
 .bi-arrow-left-circle {

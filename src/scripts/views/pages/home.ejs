@@ -1,12 +1,12 @@
-<section id="home" class="mb-5">
+<div class="container-lg">
+<section id="home" class="mb-5 mt-5">
     <div class="jumbotron text-center text-sm-left bg-transparent row wrapper">
         <div class="col-md left-column">
             <p class="lead d-inline-block content-title">
                 <img src="assets/icons/virus-lab-research-magnifier-2.svg" alt="" srcset="">
-                <span>Waspada Covid/span>
+                <span>Waspada Covid</span>
             </p>
-            <h1>Aku, Kamu, Kita Semua </br><span class="two">Bisa Kalahkan</span></br> <span
-                    class="three">Covid-19</span></h1>
+            <h1><span class="home-header"></span></h1>
             <a class="btn btn-primary btn-lg rounded-pill btn-ayovaksin" href="#vaksinasi" role="button">Ayo
                 Vaksin</a>
         </div>
@@ -14,9 +14,10 @@
             <img src="./assets/images/hero_image.png" alt="Hero Image" class="w-100">
         </div>
     </div>
-    <div class="data-wrapper">
-        <div class="data-covid row text-center">
-            <div class="col-12 col-md-4 col-sm-6">
+    <div class="data-wrapper" data-aos="zoom-in-up" data-aos-duration="500" data-aos-easing="ease">
+        <p class="data-header text-center mb-4 mt-0">Data Kasus Covid Indonesia</p>
+        <div class="data-covid text-center">
+            <div class="kasus">
                 <div class="data-title">
                     <p class="m-0">Kasus</p>
                 </div>
@@ -24,7 +25,7 @@
                     <p data-covid="kasus" class="text-warning"></p>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-sm-6">
+            <div class="kematian">
                 <div class="data-title">
                     <p class="m-0">Kematian</p>
                 </div>
@@ -32,7 +33,7 @@
                     <p data-covid="kematian" class="text-danger"></p>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-sm-12">
+            <div class="sembuh">
                 <div class="data-title">
                     <p class="m-0">Sembuh</p>
                 </div>
@@ -41,66 +42,153 @@
                 </div>
             </div>
         </div>
+            <p class="data-footer text-center lead mt-4 mb-0">*Last Update <span class="last-update"></span></p>
     </div>
 </section>
+</div>
+<div class="container-lg">
 <section id="protokol" class="mb-5">
-    <div class="wrapper text-center row">
-        <div class="section-header col-12 mb-5">
+    <div class="wrapper text-center row p-4">
+        <div class="section-header col-12 mb-5" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <p class="lead d-inline-block content-title">
                 <img src="./assets/icons/vaccine-protection-shield.svg" alt="" srcset="">
                 <span>Protokol</span>
             </p>
             <h2 class="section-header-text">Patuhi Protokol Kesehatan Agar Terhindar Dari Covid-19</h2>
+            <p>Mari kita sama-sama patuhi protokol kesehatan agar kita terhindar dari infeksi covid 19 dan menghentikan penyebarannya</p>
         </div>
         <div class="section-content col-12">
-            <div class="row">
-                <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
-                    <div class="ilustration-image">
+            <div class="row justify-content-md-around">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-up" data-aos-duration="600" data-aos-easing="ease-in-sine">
+                    <div class="ilustration-image m-auto p-2">
                         <img src="./assets/images/maskman.png" alt="Orang menggunakan masker" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
-                        <h3 class="text-left font-weight-bold">Memakai Masker</h3>
-                        <p class="text-left">Selalu menggunakan masker ketika ingin berpergian keluar rumah
+                        <h3 class="text-center text-lg-left font-weight-bold">Memakai Masker</h3>
+                        <p class="text-center text-lg-left">Selalu menggunakan masker ketika ingin berpergian keluar rumah
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
-                    <div class="ilustration-image">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="ilustration-image m-auto p-2">
                         <img src="./assets/images/washinghand.png" alt="orang mencuci tangan" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
-                        <h3 class="text-left font-weight-bold">Mencuci Tangan</h3>
-                        <p class="text-left">Sesering mungkin mencuci tangan atau memakai handsanitizer</p>
+                        <h3 class="text-center text-lg-left font-weight-bold">Mencuci Tangan</h3>
+                        <p class="text-center text-lg-left">Sesering mungkin mencuci tangan atau memakai handsanitizer</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
-                    <div class="ilustration-image">
+            <div class="row justify-content-md-around">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-sine">
+                    <div class="ilustration-image m-auto p-2">
                         <img src="./assets/images/market.png" alt="pasar swalayan" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
-                        <h3 class="text-left font-weight-bold">Hindari Swalayan</h3>
-                        <p class="text-left">Hindari swalayan dan tempat-tempat pemicu penyebab kerumunan
+                        <h3 class="text-center text-lg-left font-weight-bold">Hindari Swalayan</h3>
+                        <p class="text-center text-lg-left">Hindari swalayan dan tempat-tempat pemicu penyebab kerumunan
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
-                    <div class="ilustration-image">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="ilustration-image m-auto p-2">
                         <img src="./assets/images/coughing.jpg" alt="Orang batuk menutup mulut" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
-                        <h3 class="text-left font-weight-bold">Menutup Mulut Bila Batuk</h3>
-                        <p class="text-left">Tutuplah mulut Anda bila hendak bersin ataupun batuk</p>
+                        <h3 class="text-center text-lg-left font-weight-bold">Menutup Mulut Bila Batuk</h3>
+                        <p class="text-center text-lg-left">Tutuplah mulut Anda bila hendak bersin ataupun batuk</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+</div>
+<section id="usemasker">
+    <div class="container-lg">
+    <div class="wrapper text-center row p-4">
+        <div class="section-header col-12 mb-5" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <p class="lead d-inline-block content-title">
+                <img src="./assets/icons/vaccine-protection-shield.svg" alt="" srcset="">
+                <span>Pakai Masker</span>
+            </p>
+            <h2 class="section-header-text">Cara Menggunakan Masker dengan Benar</h2>
+            <p>Maskerku melindungimu, maskermu melindungiku, masker kita melindungi dunia</p>
+        </div>
+        <div class="section-content col-12">
+            <div class="row justify-content-md-around">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-up" data-aos-duration="600" data-aos-easing="ease-in-sine">
+                    <div class="ilustration-image m-auto p-2">
+                        <img src="./assets/images/step1.png" alt="orang mencuci sedang tangan" class="w-100 h-auto">
+                    </div>
+                    <div class="ilustration-text mt-3">
+                        <h3 class="text-center text-lg-left font-weight-bold">1. Cuci tangan pakai sabun atau handsanitizer sebelum pakai masker</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-down" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="ilustration-image m-auto p-2">
+                        <img src="./assets/images/step2.png" alt="Orang sedang ingin memakai masker bersih" class="w-100 h-auto">
+                    </div>
+                    <div class="ilustration-text mt-3">
+                        <h3 class="text-center text-lg-left font-weight-bold">2. Pakai masker bersih yang tidak rusak atau kotor</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-around">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-up" data-aos-duration="900" data-aos-easing="ease-in-sine">
+                    <div class="ilustration-image m-auto p-2">
+                        <img src="./assets/images/step3.png" alt="Orang sedang akan memakai masker" class="w-100 h-auto">
+                    </div>
+                    <div class="ilustration-text mt-3">
+                        <h3 class="text-center text-lg-left font-weight-bold">3. Hindari menyentuh bagian depan masker saat akan digunakan</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="ilustration-image m-auto p-2">
+                        <img src="./assets/images/step4.png" alt="Orang sedang menekan kawat masker" class="w-100 h-auto">
+                    </div>
+                    <div class="ilustration-text mt-3">
+                        <h3 class="text-center text-lg-left font-weight-bold">4. Pastikan masker menutup ketat area hidung, mulut, dan dagu</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-around">
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-up" data-aos-duration="900" data-aos-easing="ease-in-sine">
+                    <div class="ilustration-image m-auto p-2">
+                        <img src="./assets/images/step5.png" alt="pasar swalayan" class="w-100 h-auto">
+                    </div>
+                    <div class="ilustration-text mt-3">
+                        <h3 class="text-center text-lg-left font-weight-bold">5. Tekan bagian atas masker sehingga menutup mengikuti bentuk hidung</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 ilustration-wrapper p-3 d-lg-flex d-md-flex align-items-center mb-5"
+                    data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="ilustration-image m-auto p-2">
+                        <img src="./assets/images/step6.png" alt="Orang batuk menutup mulut" class="w-100 h-auto">
+                    </div>
+                    <div class="ilustration-text mt-3">
+                        <h3 class="text-center text-lg-left font-weight-bold">6. Pakai masker ganda lebih baik, dengan kombinasi masker medis + masker kain</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="container-lg">
 <section id="vaksinasi" class="mb-5">
     <div class="wrapper text-center row">
-        <div class="section-header col-12 mb-3">
+        <div class="section-header col-12 mb-3" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" data-aos-duration="500" data-aos-easing="linier">
             <p class="lead d-inline-block content-title">
                 <img src="./assets/icons/Date_range_duotone_line.svg" alt="" srcset="">
                 <span>Vaksinasi</span>
@@ -109,15 +197,15 @@
         </div>
         <div class="filter-tools col-12">
             <form method="get" class="form-inline justify-content-center">
-                <select class="form-control custom-select mr-sm-2 mb-2 mb-lg-0 text-center" id="filterProvinsi">
+                <select class="form-control custom-select mr-sm-2 mb-2 mb-lg-0 text-center" id="filterProvinsi" data-aos="zoom-in" data-aos-duration="500">
                     <option selected>Provinsi</option>
                     <option value="0" name="0" data-wilayah="provinsi">...</option>
                 </select>
-                <select class="form-control custom-select mr-sm-2 mb-2 mb-lg-0 text-center" id="filterKota">
+                <select class="form-control custom-select mr-sm-2 mb-2 mb-lg-0 text-center" id="filterKota" data-aos="zoom-in" data-aos-duration="800">
                     <option selected>Kabupaten/Kota</option>
                     <option value="0" name="0" data-wilayah="kota">...</option>
                 </select>
-                <button type="submit" class="btn btn-primary btn-temukan">Temukan</button>
+                <button type="submit" class="btn btn-primary btn-temukan" data-aos="zoom-in" data-aos-duration="1000">Temukan</button>
             </form>
         </div>
         <div class="vaksinasi-wrapper col-12 mt-5">
@@ -127,7 +215,10 @@
             </div>
         </div>
 </section>
+</div>
 
+<script src="jquery.js"></script>
+<script src="scripts/ajax.js"></script>
 <script src="scripts/template/template.js"></script>
 <script src="scripts/data/sourceAPI.js"></script>
 <script src="scripts/endpointAPI.js"></script>

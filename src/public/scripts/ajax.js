@@ -3,13 +3,25 @@ let result = [];
 /* *Kasus harian */
 $(async () => {
   try {
+    const loader = createTemplateLoader();
+    $('.count-data').append(loader);
+
     const harian = await fetch(`${API_ENDPOINT.KASUS_HARIAN}`);
     const harianData = await harian.json();
+    $('.count-data .loader').remove();
 
     $("[data-covid='kasus']").append(harianData.cases);
     $("[data-covid='kematian']").append(harianData.deaths);
     $("[data-covid='sembuh']").append(harianData.recovered);
-  } catch (error) {}
+
+    let date = new Date(harianData.updated);
+    $('.last-update').append(date);
+  } catch (error) {
+    $('.count-data .loader').remove();
+    $('.count-data').append(
+      `<div class="alert alert-danger">Network Error</div>`
+    );
+  }
 });
 
 $(async () => {
@@ -25,11 +37,13 @@ $(async () => {
     const responseJson = response.data;
 
     const cardItem = createTemplateCardVaksinasi(responseJson);
-    $('.loader').remove();
+    $('.list-vaksinasi .loader').remove();
     $('.list-vaksinasi').append(cardItem);
   } catch (error) {
-    alert('Terjadi kesalahan : Network Error');
-    $('.loader').remove();
+    $('.list-vaksinasi .loader').remove();
+    $('.count-data').append(
+      `<div class="alert alert-danger">Network Error</div>`
+    );
   }
 });
 
@@ -49,7 +63,7 @@ $(async () => {
     const options = createTemplateOption('provinsi', provinsiData);
     $("[data-wilayah='provinsi']").replaceWith(options);
   } catch (error) {
-    alert(error);
+    $("[data-wilayah='provinsi']").replaceWith('Network Error');
   }
 });
 
@@ -98,7 +112,8 @@ $(() => {
         $('.loader').remove();
         $('.list-vaksinasi').append(cardItem);
       } catch (error) {
-        alert('Terjadi kesalahan : Network Error');
+        $('.loader').remove();
+        $('.list-vaksinasi').append('Network Error');
       }
     }
   });

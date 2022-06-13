@@ -14,6 +14,14 @@
     width: 100%;
   }
 
+  .data-covid {
+    grid-template-columns: none;
+  }
+
+  .data-covid > *:not(:last-child) {
+    border-right: none;
+  }
+
   .list-vaksinasi {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
   }
