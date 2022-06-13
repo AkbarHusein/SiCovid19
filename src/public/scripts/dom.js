@@ -1,6 +1,17 @@
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-item a');
 
+window.addEventListener('load', () => {
+  const typed = new Typed('.home-header', {
+    strings: [
+      `Aku^500, Kamu^500, Kita Semua </br><span class="two">Bisa Kalahkan</span></br> <span
+                    class="three">Covid-19</span>`,
+    ],
+    typeSpeed: 60,
+  });
+  console.log(typed);
+});
+
 window.onscroll = () => {
   let currentScrollPosition = '';
 

@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: poppins, 'Courier New', Courier, monospace;
+  font-family: poppins, Courier, 'Courier New', monospace;
 }
 
 #mainContent {
@@ -31,7 +31,8 @@ header .btn {
   font-size: 16px !important;
   border-radius: 14px !important;
 }
-header .btn-login {
+header .btn-login,
+header .btn-user {
   color: #ea4559 !important;
   border: 3px solid #ea4559 !important;
 }
@@ -44,6 +45,10 @@ header .btn-signin {
 
 .nav-item .nav-link.active {
   color: #ea4559 !important;
+}
+
+.section-header {
+  margin-top: 50px !important;
 }
 
 /* *Home */
@@ -71,6 +76,12 @@ section#home {
   border: none;
   padding: 10px 30px;
   margin-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-ayovaksin:hover {
+  color: #ea4559 !important;
+  background-color: #fff !important;
+  border: 2px solid #ea4559;
 }
 
 .content-title {
@@ -87,8 +98,18 @@ section#home {
   font-size: 28px;
   font-weight: bold;
   background-color: rgba(234, 69, 89, 0.25);
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
 }
-
+.data-header,
+.data-footer {
+  font-size: 16px;
+}
 .data-title {
   display: inline-block;
 }
@@ -97,13 +118,33 @@ section#home {
   font-size: 32px;
 }
 
+.data-covid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.data-covid > *:not(:last-child) {
+  border-right: 2px solid #f08591;
+}
+
 /* *Protokol */
 section#protokol {
   color: #151d41;
+  overflow-x: hidden;
 }
 .section-header-text {
   font-weight: bold;
   font-size: 36px !important;
+}
+.ilustration-wrapper {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #ffffff;
+  overflow: hidden;
 }
 .ilustration-image {
   min-width: 150px;
@@ -118,10 +159,29 @@ section#protokol {
   font-size: 21px;
 }
 
+section#usemasker {
+  /* background-color: ; */
+}
+section#usemasker .ilustration-wrapper {
+  background-color: #ffe3d7;
+}
+
 /* *Vaksinasi */
 section#vaksinasi {
   color: #151d41;
 }
+
+.vaksinasi-item {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #ffffff;
+  overflow: hidden;
+}
+
 #filterProvinsi,
 #filterKota,
 .btn-temukan {

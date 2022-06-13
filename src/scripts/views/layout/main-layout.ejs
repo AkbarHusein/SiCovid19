@@ -17,6 +17,8 @@
     <link rel="icon" href="favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.css">
+    <!-- AOS Library CSS-->
+    <link href="aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -42,6 +44,9 @@
                         <a class="nav-link protokol" href="<%- url; %>#protokol">Protokol</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link usemasker" href="<%- url; %>#usemasker">Pakai Masker</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link vaksinasi" href="<%- url; %>#vaksinasi">Vaksinasi</a>
                     </li>
                     <li class="nav-item">
@@ -49,8 +54,8 @@
                     </li>
                     <ul class="btn-wrapper align-items-lg-center navbar-nav ml-0 ml-md-4 mt-3 mt-md-0">
                         <% if (username) { %>
-                            <li class="nav-item dropdown bg-danger rounded-pill">
-                                <a class="nav-link dropdown-toggle text-white btn-user" href="#" id="navbarDropdownMenuLink" role="button"
+                            <li class="nav-item dropdown">
+                                <a class="nav-link btn dropdown-toggle text-white btn-user" href="#" id="navbarDropdownMenuLink" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <%= username %>
                                 </a>
@@ -72,17 +77,20 @@
 
         </nav>
     </header>
-    <div class="container-lg">
         <main id="mainContent">
             <%- body; %>
         </main>
-    </div>
     <footer class="text-center text-white p-5">
         <div class="container">
             <p class="m-0">Copyright 2022 @Sicovid19</p>
         </div>
     </footer>
     
+    <script src="typed.js"></script>
+    <script src="aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts/dom.js"></script>
     <script src="jquery.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
