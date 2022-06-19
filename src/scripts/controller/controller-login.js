@@ -31,10 +31,14 @@ const loginAuth = async (request, response) => {
   const userForToken = {
     username: user.username,
     id: user._id,
+    name: user.name,
   };
 
-  const token = jwt.sign(userForToken, process.env.SECRETPASSWORD);
+  const token = jwt.sign(userForToken, process.env.SECRETPASSWORD, {
+    expiresIn: '1h',
+  });
 
+  request.session.accessToken = token;
   request.session.username = user.username;
   request.session.loggedin = true;
 

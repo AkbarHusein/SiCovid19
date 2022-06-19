@@ -1,93 +1,71 @@
-const entriesRouter = require('express').Router();
 const Entry = require('../models/entry');
-const User = require('../models/user');
 const jwt = require('jsonwebtoken');
+const { default: mongoose } = require('mongoose');
 
-const getTokenFrom = (request) => {
-  const authorization = request.get('authorization');
-  if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
-    return authorization.substring(7);
+const getDiscussions = async (request, response, next) => {
+  try {
+    const entries = await Entry.find({});
+    return entries;
+  } catch (exception) {
+    next(exception);
   }
 };
 
-entriesRouter.get('/', async (request, response, next) => {
-  try {
-    const entries = await Entry.find({}).populate('user', {
-      username: 1,
-      name: 1,
-    });
-    response.json(entries);
-  } catch (exception) {
-    next(exception);
-  }
-});
-
-entriesRouter.get('/:id', async (request, response, next) => {
-  try {
-    const entry = await Entry.findById(request.params.id);
-    if (entry) {
-      response.json(entry);
-    } else {
-      response.status(404).end();
-    }
-  } catch (exception) {
-    next(exception);
-  }
-});
-
-entriesRouter.post('/', async (request, response, next) => {
+const publishDiscussion = async (request, response, next) => {
   const body = request.body;
-  const token = getTokenFrom(request);
-  const decodedToken = jwt.verify(token, process.env.SECRET);
+  const token = request.session.accessToken;
+
+  const decodedToken = jwt.verify(token, process.env.SECRETPASSWORD);
   if (!token || !decodedToken.id) {
     return response.status(401).json({
       error: 'token missing or invalid',
     });
   }
-  const user = await User.findById(decodedToken.id);
+
   const entry = new Entry({
     title: body.title,
     content: body.content,
-    author: body.author,
+    author: request.session.username,
     date: new Date(),
-    votes: body.votes,
-    user: user._id,
   });
 
   try {
     const savedEntry = await entry.save();
-    user.entries = user.entries.concat(savedEntry._id);
-    await user.save();
-    response.json(savedEntry);
+    response.redirect('/forum');
   } catch (exception) {
     next(exception);
   }
-});
+};
 
-entriesRouter.delete('/:id', async (request, response, next) => {
-  try {
-    await Entry.findByIdAndRemove(request.params.id);
-    response.status(204).end();
-  } catch (exception) {
-    next(exception);
-  }
-});
-
-entriesRouter.put('/:id', async (request, response, next) => {
+const publishReply = (request, response, next) => {
   const body = request.body;
-  const entry = {
-    title: body.title,
-    content: body.content,
-    author: body.author,
-    votes: body.votes,
-  };
 
-  try {
-    await Entry.findByIdAndUpdate(request.params.id, entry, { new: true });
-    response.status(204).end();
-  } catch (exception) {
-    next(exception);
-  }
-});
+  Entry.findOne({ _id: `${body.id}` }, async (error, discussionId) => {
+    if (error) {
+      console.log('error dek');
+    }
 
-module.exports = entriesRouter;
+    await Entry.updateOne(
+      { _id: `${body.id}` },
+      {
+        $push: {
+          replies: [
+            {
+              author: request.session.username,
+              date: new Date(),
+              reply: `${body.reply}`,
+            },
+          ],
+        },
+      }
+    );
+  });
+
+  // const entry = {
+  //   title: body.title,
+  //   content: body.content,
+  //   author: body.author,
+  //   votes: body.votes,
+  // };
+};
+module.exports = { getDiscussions, publishDiscussion, publishReply };
