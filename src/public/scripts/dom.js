@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
     ],
     typeSpeed: 60,
   });
-  console.log(typed);
 });
 
 window.onscroll = () => {

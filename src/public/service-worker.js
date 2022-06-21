@@ -42,6 +42,8 @@ const toCache = [
   '/js/pwa.js',
   '/manifest.json',
   '/favicon.png',
+  'https://api.vaksinasi.id/regions',
+  'https://api.covid19.bnn.go.id/v3/covid-19/countries/id?strict=true',
 ];
 
 self.addEventListener('install', function (event) {

@@ -115,7 +115,7 @@ $(() => {
         } else {
           $('.loader').remove();
           $('.list-vaksinasi').append(
-            `<div id="alert-error" class="alert alert-info" role="alert"><strong>Tidak ada ditemukan jadwal Vaksinasi</strong></div>`
+            `<div id="alert-error" class="alert alert-info" role="alert"><strong>Jadwal Vaksinasi tidak ditemukan!</strong></div>`
           );
         }
       } catch (error) {
