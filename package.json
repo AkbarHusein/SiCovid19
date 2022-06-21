@@ -3,8 +3,8 @@
     "aos": "^2.3.4",
     "bcrypt": "^5.0.0",
     "bootstrap": "4.6",
-    "brcypt": "^1.0.1",
     "concurrently": "^7.2.1",
+    "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.8",
@@ -15,8 +15,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.15",
     "mongoose-unique-validator": "^2.0.3",
-    "passport": "^0.6.0",
-    "req-flash": "^0.0.3",
     "typed.js": "^2.0.12"
   },
   "name": "sicovid19",

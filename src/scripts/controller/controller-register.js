@@ -5,6 +5,8 @@ const signinPage = async (request, response) => {
   response.render('signin', {
     layout: '../layout/main-layout',
     page: 'signin',
+    message: request.flash('info'),
+    classAlert: request.flash('classAlert'),
     title: 'SiCovid19 | SignIn',
   });
 };
@@ -22,12 +24,14 @@ const saveRegister = async (request, response, next) => {
     passwordHash,
   });
   try {
-    const savedUser = await user.save();
-
-    request.flash('success', 'User successfully registered');
-    response.redirect('/login');
+    await user.save();
+    request.flash('info', 'Pendaftaran berhasil!');
+    request.flash('classAlert', 'alert-success');
+    return response.redirect('/login');
   } catch (exception) {
-    next(exception);
+    request.flash('info', 'Username sudah terdaftar!');
+    request.flash('classAlert', 'alert-danger');
+    return response.redirect('/signin');
   }
 };
 

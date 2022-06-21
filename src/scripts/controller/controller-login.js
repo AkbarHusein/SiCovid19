@@ -6,6 +6,8 @@ const loginPage = async (request, response) => {
   response.render('login', {
     layout: '../layout/main-layout',
     page: 'login',
+    message: request.flash('info'),
+    classAlert: request.flash('classAlert'),
     title: 'SiCovid19 | Login',
   });
 };
@@ -23,9 +25,9 @@ const loginAuth = async (request, response) => {
       : await bcrypt.compare(body.password, user.passwordHash);
 
   if (!(user && passwordCorrect)) {
-    return response.status(401).json({
-      error: 'invalid username or password',
-    });
+    request.flash('info', 'Username atau password salah!');
+    request.flash('classAlert', 'alert-danger');
+    return response.redirect('/login');
   }
 
   const userForToken = {
