@@ -68,7 +68,6 @@ app.use('/', [
   express.static(path.join(__dirname, './node_modules/bootstrap/dist/css')),
   express.static(path.join(__dirname, './node_modules/bootstrap/dist/js')),
   express.static(path.join(__dirname, './node_modules/ejs')),
-  express.static(path.join(__dirname, './node_modules/toastify-js/src')),
   express.static(path.join(__dirname, './node_modules/typed.js/lib')),
   express.static(path.join(__dirname, './src/public')),
   express.static(path.join(__dirname, './src/public/js/pwa.js')),

@@ -109,8 +109,15 @@ $(() => {
         const responseJson = response.data;
 
         const cardItem = createTemplateCardVaksinasi(responseJson);
-        $('.loader').remove();
-        $('.list-vaksinasi').append(cardItem);
+        if (responseJson.length != 0) {
+          $('.loader').remove();
+          $('.list-vaksinasi').append(cardItem);
+        } else {
+          $('.loader').remove();
+          $('.list-vaksinasi').append(
+            `<div id="alert-error" class="alert alert-info" role="alert"><strong>Tidak ada ditemukan jadwal Vaksinasi</strong></div>`
+          );
+        }
       } catch (error) {
         $('.loader').remove();
         $('.list-vaksinasi').append('Network Error');
