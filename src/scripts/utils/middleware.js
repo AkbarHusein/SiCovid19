@@ -1,5 +1,6 @@
 const unknownEndpoint = (request, response) => {
-  response.status(404).send({ error: 'unknown endpoint' });
+  var path = require('path');
+  response.status(404).sendFile(path.join(__dirname, '../views/pages', '/unknownEndpoint.html'));
 };
 
 const errorHandler = (error, request, response, next) => {
