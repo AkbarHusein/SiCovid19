@@ -91,6 +91,11 @@ section#home {
   border-bottom: 3px solid rgba(234, 69, 89);
 }
 
+a.att {
+  font: italic 0.5em "Fira Sans", serif;
+  color: #000206;
+}
+
 /* Table data */
 .data-wrapper {
   padding: 37px 0px;
