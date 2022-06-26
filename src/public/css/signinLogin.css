@@ -22,6 +22,11 @@ body {
   overflow: hidden;
 }
 
+a.att {
+  font: italic 0.5em "Fira Sans", serif;
+  color: white;
+}
+
 .bi-arrow-left-circle {
   color: white !important;
   width: 44px;
