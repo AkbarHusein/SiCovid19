@@ -86,10 +86,11 @@ section#home {
 
 .content-title {
   padding: 6px 12px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   font-size: 14px;
   color: #ea4559;
-  background-color: rgba(234, 69, 89, 0.25);
+  /* background-color: rgba(234, 69, 89, 0.25); */
+  border-bottom: 3px solid rgba(234, 69, 89);
 }
 
 /* Table data */
