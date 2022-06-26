@@ -108,10 +108,10 @@ $(() => {
         const response = await data.json();
         const responseJson = response.data;
 
-        const cardItem = createTemplateCardVaksinasi(responseJson);
+        createTemplateCardVaksinasi(responseJson);
         if (responseJson.length != 0) {
           $('.loader').remove();
-          $('.list-vaksinasi').append(cardItem);
+          // $('.list-vaksinasi').append(cardItem);
         } else {
           $('.loader').remove();
           $('.list-vaksinasi').append(
