@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: poppins, Courier, 'Courier New', monospace;
+  font-family: 'Poppins', Courier, 'Courier New', monospace !important;
 }
 
 #mainContent {
@@ -343,5 +343,4 @@ footer {
 #btn_prev {
   display: inline-block !important;
   margin-right: 20px !important;
-  
 }

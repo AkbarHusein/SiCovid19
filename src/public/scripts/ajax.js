@@ -15,7 +15,16 @@ $(async () => {
     $("[data-covid='sembuh']").append(harianData.recovered);
 
     let date = new Date(harianData.updated);
-    $('.last-update').append(date);
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+
+    const lastUpdate = `${day}/${month}/${year} ${hour}:${minute}`;
+
+    $('.last-update').append(lastUpdate);
   } catch (error) {
     $('.count-data .loader').remove();
     $('.count-data').append(
