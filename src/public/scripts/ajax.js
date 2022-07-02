@@ -1,4 +1,27 @@
-let result = [];
+let city = '';
+
+//check local storage
+function checkLocalStorage() {
+  if (typeof Storage !== 'undefined') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//save to local storage
+function saveToLocalStorage(key, value) {
+  if (checkLocalStorage()) {
+    localStorage.setItem(key, value);
+  }
+}
+
+//get from local storage
+function getFromLocalStorage(key) {
+  if (checkLocalStorage()) {
+    return localStorage.getItem(key);
+  }
+}
 
 /* *Kasus harian */
 $(async () => {
@@ -67,9 +90,10 @@ $(async () => {
     const provinsiJson = await provinsi.json();
     const provinsiData = provinsiJson.data;
 
-    result = provinsiData;
+    saveToLocalStorage('provinsi', JSON.stringify(provinsiData));
 
-    const options = createTemplateOption('provinsi', provinsiData);
+    city = JSON.parse(getFromLocalStorage('provinsi'));
+    const options = createTemplateOption('provinsi', city);
     $("[data-wilayah='provinsi']").replaceWith(options);
   } catch (error) {
     $("[data-wilayah='provinsi']").replaceWith('Network Error');
@@ -83,7 +107,7 @@ $(() => {
   provinsiElement.on('change', (e) => {
     const provinsi = e.target.value;
 
-    result.forEach((province) => {
+    city.forEach((province) => {
       if (province.province === provinsi) {
         const options = createTemplateOption('kota', province.city);
         $("[data-wilayah='kota']").replaceWith(options);
@@ -129,7 +153,7 @@ $(() => {
         }
       } catch (error) {
         $('.loader').remove();
-        $('.list-vaksinasi').append('Network Error');
+        alert('Network Error');
       }
     }
   });
